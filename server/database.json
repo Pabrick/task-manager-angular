@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "label": "Kitchen Cleanup",
+      "description": "Clean my dirty kitchen",
+      "category": "house",
+      "done": false,
+      "id": 1
+    },
+    {
+      "label": "Taxes",
+      "description": "Start doing my taxes and contact my accountant John for advice",
+      "category": "bureaucracy",
+      "done": false,
+      "id": 2
+    },
+    {
+      "label": "Do tests",
+      "description": "Finish project",
+      "category": "work",
+      "done": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "label": "what is the name of this task? hehehehe",
+      "description": "what is this task about?",
+      "category": "which category is this task?",
+      "done": false
+    }
+  ]
+}

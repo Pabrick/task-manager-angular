@@ -1,0 +1,11 @@
+<div class="task-list">
+   <h2>Your task for today are:</h2>
+   <ul>
+      <li *ngFor="let taskData of taskList">
+         <task-item [data]="taskData" (onActionEmt)="onTaskAction($event)"></task-item>
+      </li>
+      <li>
+         <task-item [data]="newTask" (onActionEmt)="onTaskAction($event)"></task-item>
+      </li>
+   </ul>
+</div>

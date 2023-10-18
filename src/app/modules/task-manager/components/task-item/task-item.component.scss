@@ -1,0 +1,62 @@
+.task-item {
+   --space: 10px;
+   --borderRadius: 4px;
+   --colorBase: #9575cd;
+   --colorBase--dark: #311b92;
+   --colorBase--light: #d1c4e9;
+
+   border: 2px solid var(--colorBase--dark);
+   border-radius: var(--borderRadius);
+   background-color: var(--colorBase);
+   padding: var(--space);
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-column-gap: var(--space);
+
+   .info {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+
+      label {
+         margin-right: var(--space);
+         grid-column-start: 1;
+         grid-column-end: 2;
+         font-size: 0.8rem;
+         align-self: center;
+      }
+
+      input {
+         padding: 0 calc(var(--space) / 2);
+         grid-column-start: 2;
+         margin: calc(var(--space) / 2) 0;
+         border: 0;
+      }
+   }
+
+   .actions {
+      display: flex;
+      flex-flow: column;
+
+      &.task-created {
+         justify-content: space-between;
+      }
+      &.task-new {
+         justify-content: center;
+      }
+
+      button {
+         border: 1px solid var(--colorBase--dark);
+         background-color: var(--colorBase--light);
+         width: 100%;
+
+         -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+         -moz-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+         box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+
+         &:hover {
+            background-color: var(--colorBase--dark);
+            color: white;
+         }
+      }
+   }
+}

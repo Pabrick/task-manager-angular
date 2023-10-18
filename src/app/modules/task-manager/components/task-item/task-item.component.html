@@ -1,0 +1,25 @@
+<main class="task-item">
+
+   <section class="info">
+      <label>Label:</label><input id="taskLabel" class="label" type="text" [(ngModel)]="data.label">
+      <label>Description:</label><input id="taskDescription" class="description" type="text"
+         [(ngModel)]="data.description">
+      <label>Category:</label><input id="taskCategory" class="category" type="text" [(ngModel)]="data.category">
+   </section>
+
+   <ng-container *ngIf="data.id">
+      <section class="actions task-created">
+         <button *ngIf="!data.done" (click)="onClickDone(data)" alt="set to done">✖️ (not done)</button>
+         <button *ngIf="data.done" (click)="onClickUndone(data)" alt="set to undone">✔️ (done!)</button>
+         <button (click)="onClickEdit(data)" alt="save">💾 (save)</button>
+         <button (click)="onClickDelete(data)" id="btDeleteTask" alt="delete">☠️ (delete)</button>
+      </section>
+   </ng-container>
+
+   <ng-container *ngIf="!data.id">
+      <section class="actions task-new">
+         <button (click)="onClickAdd(data)" id="btCreateTask" alt="create">✏️ (create)</button>
+      </section>
+   </ng-container>
+
+</main>
