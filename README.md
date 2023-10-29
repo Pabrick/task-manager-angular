@@ -1,6 +1,6 @@
 # Task Manager - Angular workbench project
 
-This project is mainty to test and update all the new functionalities Angular is dropping out.
+This project is mainly to test and update all the new functionalities Angular is dropping out.
 
 ## Development server
 
