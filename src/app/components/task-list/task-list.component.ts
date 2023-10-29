@@ -5,14 +5,18 @@ import { ITask } from '../../interfaces/task.interface';
 import {
    ITaskAction,
    TaskAction$,
-} from './../../interfaces/task-action.interface';
-import { TaskManagerService } from './../../services/task-manager.service';
+} from '../../interfaces/task-action.interface';
+import { TaskManagerService } from '../../services/task-manager.service';
 import { TaskActions } from '../../utils/task-actions.const';
+import { CommonModule } from '@angular/common';
+import { TaskItemComponent } from '../task-item/task-item.component';
 
 @Component({
    selector: 'task-list',
    templateUrl: './task-list.component.html',
    styleUrls: ['./task-list.component.scss'],
+   standalone: true,
+   imports: [CommonModule, TaskItemComponent],
 })
 export class TaskListComponent implements OnInit, OnDestroy {
    public taskList!: ITask[];
@@ -33,6 +37,7 @@ export class TaskListComponent implements OnInit, OnDestroy {
          .pipe(takeUntil(this._destroy$))
          .subscribe((list) => {
             this.taskList = list;
+            console.log(list);
          });
    }
 

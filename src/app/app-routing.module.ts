@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
    {
       path: 'list',
-      loadChildren: () =>
-         import('./modules/task-manager/task-manager.module').then(
-            (m) => m.TaskManagerModule
+      loadComponent: () =>
+         import('./components/task-list/task-list.component').then(
+            (m) => m.TaskListComponent
          ),
    },
    {

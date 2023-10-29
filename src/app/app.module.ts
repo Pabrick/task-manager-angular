@@ -7,21 +7,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { TaskManagerModule } from './modules/task-manager/task-manager.module';
 import { CommonModule } from '@angular/common';
+import { RootComponent } from './components/root/root.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
+import { TaskItemComponent } from './components/task-item/task-item.component';
 
 @NgModule({
-   declarations: [AppComponent],
+   declarations: [RootComponent],
    imports: [
       BrowserModule,
       CommonModule,
       AppRoutingModule,
       HttpClientModule,
-      TaskManagerModule,
+      TaskListComponent,
+      TaskItemComponent,
    ],
    providers: [HttpClient],
-   bootstrap: [AppComponent],
+   bootstrap: [RootComponent],
    schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

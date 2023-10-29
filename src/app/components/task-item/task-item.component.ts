@@ -1,12 +1,16 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ITask } from '../../interfaces/task.interface';
 import { TaskActions } from '../../utils/task-actions.const';
-import { ITaskAction } from './../../interfaces/task-action.interface';
+import { ITaskAction } from '../../interfaces/task-action.interface';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
    selector: 'task-item',
    templateUrl: './task-item.component.html',
    styleUrls: ['./task-item.component.scss'],
+   standalone: true,
+   imports: [CommonModule, FormsModule],
 })
 export class TaskItemComponent implements OnInit {
    @Input() public data!: ITask;

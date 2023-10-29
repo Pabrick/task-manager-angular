@@ -6,8 +6,8 @@ import {
    NgModule,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TaskItemComponent } from './components/task-item/task-item.component';
-import { TaskListComponent } from './components/task-list/task-list.component';
+import { TaskItemComponent } from '../../components/task-item/task-item.component';
+import { TaskListComponent } from '../../components/task-list/task-list.component';
 
 @NgModule({
    declarations: [TaskListComponent, TaskItemComponent],
