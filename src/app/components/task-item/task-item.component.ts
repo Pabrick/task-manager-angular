@@ -4,13 +4,14 @@ import { TaskActions } from '../../utils/task-actions.const';
 import { ITaskAction } from '../../interfaces/task-action.interface';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DatepickerComponent } from '../datepicker/datepicker.component';
 
 @Component({
    selector: 'task-item',
    templateUrl: './task-item.component.html',
    styleUrls: ['./task-item.component.scss'],
    standalone: true,
-   imports: [CommonModule, FormsModule],
+   imports: [CommonModule, FormsModule, DatepickerComponent],
 })
 export class TaskItemComponent implements OnInit {
    @Input() public data!: ITask;

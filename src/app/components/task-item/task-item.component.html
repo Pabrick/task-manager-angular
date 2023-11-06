@@ -5,6 +5,8 @@
       <label>Description:</label><input id="taskDescription" class="description" type="text"
          [(ngModel)]="data.description">
       <label>Category:</label><input id="taskCategory" class="category" type="text" [(ngModel)]="data.category">
+      <label>Date:</label>
+      <datepicker />
    </section>
 
    <ng-container *ngIf="data.id">
